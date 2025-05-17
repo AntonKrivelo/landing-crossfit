@@ -235,7 +235,7 @@ svg * {
     --color-light: #FFFFFF;
     --color-dark-gray: #404040;
     --color-light-gray: #C4C4C4;
-
+    --color-dark-alternate: #131619;
     --border-radius: 30px;
     --border: 1px solid var(--color-light);
 
@@ -281,6 +281,18 @@ a:hover {
     font-size: 12px;
     white-space: nowrap;
 }
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
 .container {
    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
    margin-inline: auto;
@@ -288,6 +300,7 @@ a:hover {
 }
 .header {
     display: flex;
+    background-color: var(--color-dark-alternate);
     justify-content: space-between;
     align-items: center;
     column-gap: 20px;
@@ -321,7 +334,7 @@ a:hover {
     position: absolute;
     background-color: var(--color-light);
     width: 5px;
-    height: 5px;
+    aspect-ratio: 1;
     border-radius: 100%;
     right: -7px;
 }
@@ -361,6 +374,13 @@ a:hover {
 .header-burger-button:hover {
     color: var(--color-light-gray);
     border-color: currentColor;
+}
+.banner {
+  padding: 0 70px 0 70px;
+}
+
+.banner-vector {
+  transform: rotate(270deg);
 }
 
 @media(max-width: 880px){
