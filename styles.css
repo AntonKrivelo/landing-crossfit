@@ -244,7 +244,7 @@ svg * {
 
     --input-height: 54px;
 
-    --container-width: 1300px;
+    --container-width: 1200px;
     --container-padding-x: 15px;
 
     --transition-duration: 0.2s;
@@ -431,6 +431,11 @@ a:hover {
 .banner-pagination-button.is-current {
   background-color: var(--color-light);
 }
+
+
+
+
+
 @media(max-width: 900px) {
     .header-menu-list {
         column-gap: 45px;
