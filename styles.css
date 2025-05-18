@@ -381,7 +381,6 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  min-height: 900px;
   padding: 36px 70px 36px 70px;
 }
 .banner-body {
@@ -392,7 +391,7 @@ a:hover {
   align-items: end;
   line-height: 1.27;
   font-weight: 700;
-  font-size: 30px;
+  font-size: min(2.20vw, 30px);
 }
 .banner-info::before{
   content: '';
@@ -404,7 +403,7 @@ a:hover {
   margin-right: 30px;
 }
 .banner-title {
-  font-size: 250px;
+  font-size: min(15.75vw, 280px);
   font-weight: 700;
   line-height: 1;
 }
@@ -432,6 +431,11 @@ a:hover {
 .banner-pagination-button.is-current {
   background-color: var(--color-light);
 }
+@media(max-width: 900px) {
+    .header-menu-list {
+        column-gap: 45px;
+    }
+}
 @media(max-width: 880px){
     .header {
         flex-wrap: wrap;
@@ -446,6 +450,20 @@ a:hover {
     .header-menu-link {
         height: 50px;
     }
+    .banner-info::before{
+      width: 95px;
+    }
+}
+@media(max-width: 480px) {
+    .header-menu-list {
+      column-gap: 25px;
+    }
+    .banner-title {
+      font-size: min(13.75vw);
+    }
+    .banner-info::before{
+      width: 75px;
+    }
 }
 @media(max-width: 400px) {
     .button {
@@ -456,10 +474,19 @@ a:hover {
         padding-top: 15px;
         row-gap: 10px;
     }
-    .header-menu-list {
-        column-gap: 25px;
-    }
     .header-actions {
         column-gap: 10px;
     }
+    .banner-info::before {
+        width: 55px;
+    }
+}
+
+@media(max-width: 380px) {
+  .header-menu-list {
+    column-gap: 15px;
+  }
+  .banner-title {
+    font-size: min(11.75vw);
+  }
 }
